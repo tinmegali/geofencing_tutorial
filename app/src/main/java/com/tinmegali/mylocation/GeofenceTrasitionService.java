@@ -33,7 +33,6 @@ public class GeofenceTrasitionService extends IntentService {
     @Override
     protected void onHandleIntent(Intent intent) {
         GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
-git add
         // Handling errors
         if ( geofencingEvent.hasError() ) {
             String errorMsg = getErrorString(geofencingEvent.getErrorCode() );

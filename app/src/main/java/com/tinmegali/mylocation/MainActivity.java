@@ -364,8 +364,9 @@ public class MainActivity extends AppCompatActivity
             return geoFencePendingIntent;
 
         Intent intent = new Intent( this, GeofenceTrasitionService.class);
-        return PendingIntent.getService(
+        geoFencePendingIntent = PendingIntent.getService(
                 this, GEOFENCE_REQ_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT );
+        return geoFencePendingIntent;
     }
 
     // Add the created GeofenceRequest to the device's monitoring list
